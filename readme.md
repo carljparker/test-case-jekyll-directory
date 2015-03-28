@@ -17,7 +17,7 @@ If I build with Jekyll `2.4.0`, I get the following output:
                         done.
      Auto-regeneration: disabled. Use --watch to enable.
 
-If I build Jekyll `2.5.0`, I get the following output:
+If I build with Jekyll `2.5.0`, I get the following output:
 
     $ ~/.rvm/gems/ruby-2.2.0/gems/jekyll-2.5.0/bin/jekyll build --config _config.yml -s _posts -d ./_site --verbose
     Configuration file: _config.yml
