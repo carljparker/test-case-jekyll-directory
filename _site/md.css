@@ -1,0 +1,88 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    margin-right: 5%;
+    background-color: #F0EFE7;
+}
+
+h1 {
+    color: black
+}
+
+h2 {
+    color: #f14e32
+}
+
+h3 {
+    color: #1873CC
+}
+
+table {
+  width: 60%
+}
+
+/*                          
+ *
+ * Do not display the pandoc metadata values in output HTML file.  
+ * This does not prevent the values from appearing in PDF though.
+ *
+ * I no longer specify metadata in the source, but instead specify
+ * the title using the --title-prefix cmd line option. I'm leaving
+ * this CSS code in here for those who come after us.
+ *
+*/
+
+h1.title  {
+    display: none
+}
+
+h2.author  {
+    display: none
+}
+
+h3.date  {
+    display: none
+}
+
+/*
+  UPDATE: We have moved to using Latex for PDF output, which 
+  avoids the issue with weasyprint described below. So we are 
+  back to listing a cascade of font-family for <code>
+
+  weasyprint is unable to handle multiple font-family values
+  in the CSS for <code> or <pre>. However, for code blocks, weasyprint
+  uses the pattern <pre><code>CODE TEXT HERE</code></pre> so the value
+  for <code> overrides the values specified for <pre>. So if we limit 
+  <code> to just one font-family value, we work around the issue.
+
+  This is reported on GitHub Issues as:
+
+    https://github.com/Kozea/WeasyPrint/issues/158
+
+  and asked about on StackOverflow at:
+
+    http://stackoverflow.com/questions/21271711/how-do-i-specify-fallback-to-monospace-in-weasyprint
+*/
+
+code {
+    font-family: Monaco, Menlo, Consolas, Courier;
+}
+
+pre {
+    font-family: Monaco, Menlo, Consolas, Courier;
+    font-size: 1em;
+    margin-left: 3em;
+    color: mediumblue;
+}
+
+td, th {
+  border: 1px solid #999;
+  padding: 0.5em;
+}
+
+@page {
+  @bottom-right {
+      content: counter(page) " of " counter(pages);
+  }
+}
+

@@ -1,0 +1,4 @@
+layout: default
+css: md.css
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
