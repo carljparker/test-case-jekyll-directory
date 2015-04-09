@@ -3,7 +3,7 @@ This repo demonstrates an issue in which Jekyll appends the _absolute_
 path of `_layout/default.htm` to the absolute path for the `_posts`
 directory and then tries to find default.htm at that location.
 
-The issue appears to have started occuring in Jekyll `2.5.0`. 
+The issue appears to have started occurring in Jekyll `2.5.0`. 
 
 I do not see the issue in the preceding version, Jekyll `2.4.0`.
 
